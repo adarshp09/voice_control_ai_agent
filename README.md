@@ -122,31 +122,3 @@ streamlit run app.py
 This project was built to run locally on Apple Silicon. Whisper uses PyTorch with MPS when available, and Ollama runs locally for intent classification and response generation.
 
 If MPS is unavailable, the speech model falls back to CPU, which is slower but still functional.
-
-## Submission Notes
-
-This project satisfies the core assignment requirements:
-- microphone input and uploaded audio input
-- local speech-to-text
-- local intent classification
-- safe tool execution
-- web UI showing transcription, intent, action, and output
-
-Bonus features included:
-- human-in-the-loop confirmation before file writes
-- session history in the UI
-- quality checks for unclear audio
-- text input mode for easier debugging and demo backup
-
-## Troubleshooting
-
-If transcription is slow on first run:
-- the speech model may still be downloading or warming up
-
-If Ollama is not responding:
-- make sure `ollama serve` is running
-- verify the model exists with `ollama list`
-
-If microphone recording does not work:
-- install `streamlit-mic-recorder`
-- allow microphone access in the browser
